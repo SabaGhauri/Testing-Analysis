@@ -1,0 +1,169 @@
+Test#1: Activate 2.5 2.5 2.6 PayCredit Approved Super StartPump PumpLiter StopPump Receipt TurnOff
+Test#2: Activate 2.5 2.5 2.6 PayCredit Reject PayCredit Approved Regular StartPump PumpLiter StopPump NoReceipt TurnOff
+Test#3: Activate 2.5 2.5 2.6 PayCash 5 Diesel StartPump PumpLiter PumpLiter StopPump Receipt PayCredit Approved Cancel PayCredit Approved Regular Cancel PayCredit Approved Diesel StartPump PumpLiter PumpLiter StopPump Receipt PayCash 45 Cancel TurnOff  
+Test#4: Activate 2.5 2.5 2.6 PayCredit Reject PayCash 1 Regular StartPump PumpLiter NoReceipt PayCredit Approved Cancel PayCash 5 Super StartPump PumpLiter StopPump NoReceipt TurnOff 
+Test#5: Activate 2.5 2.5 2.6 TurnOff
+Test#6: Activate 2.5 2.5 2.6 PayCash 3 Super Cancel TurnOff
+Test#7: Activate 2.5 2.5 2.6 PayCredit Reject TurnOff
+Test#8: Activate 2.5 2.5 2.6 PayCash 10 Super StartPump StopPump NoReceipt PayCash 5 Cancel PayCredit Approved Regular StartPump StopPump NoReceipt PayCash 5 StartPump StopPump NoReceipt TurnOff
+Test#9: Activate 2.5 2.5 2.6 PayCash 1 Cancel PayCash 5 Diesel Cancel PayCash 5 Cancel PayCredit Approved Super StartPump StopPump Receipt TurnOff
+Test#10: Activate 2.5 2.5 2.6 PayCash 5 Regular StartPump PumpLiter PumpLiter Receipt TurnOff
+
+Test#11: Activate 2.5 2.5 2.6 Cancel
+Test#12: Activate 2.5 2.5 2.6 Approved
+Test#13: Activate 2.5 2.5 2.6 Regular
+Test#14: Activate 2.5 2.5 2.6 Super
+Test#15: Activate 2.5 2.5 2.6 Diesel
+Test#16: Activate 2.5 2.5 2.6 StartPump
+Test#17: Activate 2.5 2.5 2.6 PumpLiter
+Test#18: Activate 2.5 2.5 2.6 StopPump
+Test#18: Activate 2.5 2.5 2.6 NoReceipt
+Test#19: Activate 2.5 2.5 2.6 Receipt
+Test#20: Activate 2.5 2.5 2.6 PayCash 0
+Test#21: Activate 2.5 2.5 2.6 Activate 2.5 2.5 2.6 
+Test#22: Activate 2.5 2.5 2.6 Reject
+
+Test#23: Activate 2.5 2.5 2.6 PayCredit Approved Diesel StartPump PayCredit
+Test#24: Activate 2.5 2.5 2.6 PayCredit Approved Diesel StartPump Approved
+Test#25: Activate 2.5 2.5 2.6 PayCredit Approved Diesel StartPump Reject
+Test#26: Activate 2.5 2.5 2.6 PayCredit Approved Diesel StartPump Cancel
+Test#27: Activate 2.5 2.5 2.6 PayCredit Approved Diesel StartPump PayCash 5
+Test#28: Activate 2.5 2.5 2.6 PayCredit Approved Diesel StartPump Regular
+Test#29: Activate 2.5 2.5 2.6 PayCredit Approved Diesel StartPump Super
+Test#30: Activate 2.5 2.5 2.6 PayCredit Approved Diesel StartPump Diesel 
+Test#31: Activate 2.5 2.5 2.6 PayCredit Approved Diesel StartPump Receipt
+Test#32: Activate 2.5 2.5 2.6 PayCredit Approved Diesel StartPump NoReceipt
+Test#33: Activate 2.5 2.5 2.6 PayCredit Approved Diesel StartPump Activate 2.5 2.5 2.6
+Test#34: Activate 2.5 2.5 2.6 PayCredit Approved Diesel StartPump StartPump
+
+Test#35: Activate 2.5 2.5 2.6 PayCredit Activate 2.5 2.5 2.6
+Test#36: Activate 2.5 2.5 2.6 PayCredit PayCredit
+Test#37: Activate 2.5 2.5 2.6 PayCredit Cancel
+Test#38: Activate 2.5 2.5 2.6 PayCredit PayCash 4
+Test#39: Activate 2.5 2.5 2.6 PayCredit Regular
+Test#40: Activate 2.5 2.5 2.6 PayCredit Diesel
+Test#41: Activate 2.5 2.5 2.6 PayCredit Super
+Test#42: Activate 2.5 2.5 2.6 PayCredit StartPump
+Test#43: Activate 2.5 2.5 2.6 PayCredit PumpLiter
+Test#44: Activate 2.5 2.5 2.6 PayCredit StopPump
+Test#45: Activate 2.5 2.5 2.6 PayCredit NoReceipt
+Test#46: Activate 2.5 2.5 2.6 PayCredit Receipt
+Test#47: Activate 2.5 2.5 2.6 PayCredit TurnOff
+
+Test#48: Activate 2.5 2.5 2.6 PayCredit Approved Activate 2.5 2.5 2.6
+Test#49: Activate 2.5 2.5 2.6 PayCredit Approved PayCredit
+Test#50: Activate 2.5 2.5 2.6 PayCredit Approved Approved
+Test#51: Activate 2.5 2.5 2.6 PayCredit Approved Reject
+Test#52: Activate 2.5 2.5 2.6 PayCredit Approved PumpLiter
+Test#53: Activate 2.5 2.5 2.6 PayCredit Approved PayCash 5
+Test#54: Activate 2.5 2.5 2.6 PayCredit Approved StartPump
+Test#55: Activate 2.5 2.5 2.6 PayCredit Approved StopPump
+Test#56: Activate 2.5 2.5 2.6 PayCredit Approved Receipt
+Test#57: Activate 2.5 2.5 2.6 PayCredit Approved NoReceipt
+Test#58: Activate 2.5 2.5 2.6 PayCredit Approved TurnOff
+
+
+
+Test#59: Activate 2.5 2.5 2.6 PayCredit Approved Diesel Activate 2.5 2.5 2.6
+Test#60: Activate 2.5 2.5 2.6 PayCredit Approved Diesel PayCredit
+Test#61: Activate 2.5 2.5 2.6 PayCredit Approved Diesel Approved
+Test#62: Activate 2.5 2.5 2.6 PayCredit Approved Diesel Diesel
+Test#63: Activate 2.5 2.5 2.6 PayCredit Approved Diesel Regular
+Test#64: Activate 2.5 2.5 2.6 PayCredit Approved Diesel Super
+Test#65: Activate 2.5 2.5 2.6 PayCredit Approved Diesel PumpLiter
+Test#66: Activate 2.5 2.5 2.6 PayCredit Approved Diesel StopPump
+Test#67: Activate 2.5 2.5 2.6 PayCredit Approved Diesel Reject
+Test#68: Activate 2.5 2.5 2.6 PayCredit Approved Diesel PayCash 5
+Test#69: Activate 2.5 2.5 2.6 PayCredit Approved Diesel Receipt
+Test#70: Activate 2.5 2.5 2.6 PayCredit Approved Diesel NoReceipt
+Test#71: Activate 2.5 2.5 2.6 PayCredit Approved Diesel TurnOff
+
+
+
+Test#72: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump Activate 2.5 2.5 2.6
+Test#73: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump PayCash 5
+Test#74: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump Super
+Test#75: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StartPump
+Test#76: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump PayCredit
+Test#77: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump Approved
+Test#78: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump Reject
+Test#79: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump Diesel 
+Test#80: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump Regular 
+Test#81: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump Receipt
+Test#82: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump NoReceipt
+Test#83: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump TurnOff
+Test#84: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump Cancel
+
+Test#85: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StopPump Activate 2.5 2.5 2.6
+Test#86: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StopPump PayCash 5
+Test#87: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StopPump Super
+Test#88: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StopPump StartPump
+Test#89: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StopPump StopPump
+Test#90: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StopPump Diesel
+Test#91: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StopPump Regular
+Test#92: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StopPump PayCredit
+Test#93: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StopPump Approved
+Test#94: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StopPump Reject
+Test#95: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StopPump Cancel
+Test#96: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StopPump TurnOff
+Test#97: Activate 2.5 2.5 2.6 PayCash 5 Super StartPump StopPump PumpLiter
+
+Test#98: Activate 2.5 2.5 2.6
+Test#99: Activate 2.5 2.5 -2.6
+Test#100: Activate 2.5 -2.5 2.6
+Test#101: Activate 2.5 -2.5 -2.6
+Test#102: Activate -2.5 2.5 2.6
+Test#103: Activate -2.5 2.5 -2.6
+Test#104: Activate -2.5 -2.5 2.6
+Test#105: Activate -2.5 -2.5 -2.6
+
+Test#106: Activate 2.5 2.5 2.6 PayCredit
+Test#107: PayCredit
+
+Test#108: Activate 2.5 2.5 2.6 PayCredit Reject
+Test#109: Reject
+
+Test#110: Activate 2.5 2.5 2.6 PayCredit Approved Cancel 
+Test#111: Activate 2.5 2.5 2.6 PayCredit Approved Diesel Cancel 
+Test#112: Activate 2.5 2.5 2.6 Cancel
+
+Test#113: Activate 2.5 2.5 2.6 PayCash 5
+Test#114: Activate 2.5 2.5 2.6 PayCash -5
+Test#115: PayCash 5
+Test#116: PayCash -5
+
+Test#117: Activate 2.5 2.5 2.6 PayCash 5 Regular
+Test#118: Activate 2.5 2.5 2.6 Regular
+
+Test#119: Activate 2.5 2.5 2.6 PayCash 5 Regular StartPump
+Test#120: Activate 2.5 2.5 2.6 PayCash 5 StartPump
+
+Test#121: Activate 2.5 2.5 2.6 PayCash 5 Regular StartPump PumpLiter
+Test#122: Activate 2.5 2.5 2.6 PayCash 5 Regular PumpLiter
+
+Test#123: Activate 2.5 2.5 2.6 PayCash 50 Cancel PayCredit Approved Regular StartPump PumpLiter
+Test#124: Activate 2.5 2.5 2.6 PayCredit Approved Regular StartPump PumpLiter
+Test#125: Activate 2.5 2.5 2.6 PayCash 50 Regular StartPump PumpLiter
+Test#126: Activate 2.5 2.5 2.6 PayCash 1 Regular StartPump PumpLiter
+
+Test#127: Activate 2.5 2.5 2.6 PayCash 1 Regular StartPump PumpLiter PumpLiter
+Test#128: Activate 2.5 2.5 2.6 PayCash 25 Regular StartPump PumpLiter PumpLiter
+Test#129: Activate 2.5 2.5 2.6 PayCash 1 Regular StartPump PumpLiter
+Test#130: Activate 2.5 2.5 2.6 PayCash 25 Cancel PayCredit Approved Regular StartPump PumpLiter
+
+Test#131: Activate 2.5 2.5 2.6 PayCash 25 Regular StartPump PumpLiter PumpLiter
+Test#132: Activate 2.5 2.5 2.6 PayCash 25 Regular StartPump PumpLiter PumpLiter
+Test#133: Activate 2.5 2.5 2.6 PayCash 1 Regular StartPump PumpLiter
+Test#134: Activate 2.5 2.5 2.6 PayCash 25 Cancel PayCredit Approved Regular StartPump PumpLiter
+
+Test#135: Activate 2.5 2.5 2.6 PayCredit Approved Regular StartPump StopPump
+Test#136: Activate 2.5 2.5 2.6 PayCredit Approved Regular StopPump
+
+Test#137: Activate 2.5 2.5 2.6 PayCredit Approved Regular StartPump PumpLiter
+Test#138: Activate 2.5 2.5 2.6 PayCredit Approved Regular StartPump PumpLiter
+
+
+
+
+
+$$

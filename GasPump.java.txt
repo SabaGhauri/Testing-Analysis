@@ -1,0 +1,489 @@
+import java.util.Scanner;
+
+
+public class GasPump {
+
+		private float Rprice;
+		private float Sprice;
+		private float Dprice;
+		private int w;
+		private float price;
+		private int L;
+		private float total;
+		private float cash;
+		private int k;
+
+		public GasPump() {
+			Rprice = 0;
+			Sprice = 0;
+			Dprice = 0;
+			w = 0;
+			price = 0;
+			L = 0;
+			total = 0;
+			cash = 0;
+			k = -1;
+		}
+
+		public final int Activate(float a, float b, float d) {
+			if ((k == -1) && (a > 0) && (b > 0) && (d > 0)) {
+				k = 0;
+				Rprice = a;
+				Sprice = b;
+				Dprice = d;
+				System.out.print("GAS PUMP IS ON");
+				System.out.print("\n");
+				return 1;
+			} else {
+				return 0;
+			}
+
+		}
+
+
+		public final int PayCredit() {
+			if (k == 0) {
+				k = 2;
+				System.out.print("CHECKING CREDIT CARD.");
+				System.out.print("\n");
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+
+		public final int Reject() {
+			if (k == 2) {
+				k = 0;
+				System.out.print("CREDIT CARD IS REJECTED.");
+				System.out.print("\n");
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+
+		public final int Cancel() {
+			if ((k == 3) || (k == 4)) {
+				k = 0;
+				System.out.print("TRANSACTION IS CANCELLED.");
+				System.out.print("\n");
+				if (w == 0) {
+					System.out.print("$");
+					System.out.print(cash);
+					System.out.print(" OF CASH IS RETURNED");
+					System.out.print("\n");
+				}
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+
+		public final int Approved() {
+			if (k == 2) {
+				k = 3;
+				w = 1;
+				System.out.print("CREDIT CARD APPROVED.");
+				System.out.print("\n");
+				System.out.print("SELECT TYPE OF GASOLINE:");
+				System.out.print("\n");
+				System.out.print("a. REGULAR");
+				System.out.print("\n");
+				System.out.print("b. SUPER");
+				System.out.print("\n");
+				System.out.print("c. DIESEL");
+				System.out.print("\n");
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+
+		public final int PayCash(float c) {
+			if ((k == 0) && (c > 0)) {
+				k = 3;
+				w = 0;
+				cash = c;
+				System.out.print("SELECT TYPE OF GASOLINE:");
+				System.out.print("\n");
+				System.out.print("a. REGULAR");
+				System.out.print("\n");
+				System.out.print("b. SUPER");
+				System.out.print("\n");
+				System.out.print("c. DIESEL");
+				System.out.print("\n");
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+
+		public final int Regular() {
+			if (k == 3) {
+				k = 4;
+				System.out.print("REGULAR IS SELECTED.");
+				System.out.print("\n");
+				price = Rprice;
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+
+		public final int Super() {
+			if (k == 3) {
+				k = 4;
+				System.out.print("SUPER IS SELECTED.");
+				System.out.print("\n");
+				price = Sprice;
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+
+		public final int Diesel() {
+			if (k == 3) {
+				k = 4;
+				System.out.print("DIESEL IS SELECTED.");
+				System.out.print("\n");
+				price = Dprice;
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+
+		public final int StartPump() {
+			if (k == 4) {
+				k = 5;
+				L = 0;
+				total = 0;
+				System.out.print("PUMP IS READY TO DISPOSE ");
+				System.out.print("\n");
+				System.out.print("# OF LITERS PUMPED: ");
+				System.out.print(L);
+				System.out.print("\n");
+				System.out.print("TOTAL CHARGE: $");
+				System.out.print(total);
+				System.out.print("\n");
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+
+		public final int PumpLiter() {
+			if (k == 5) {
+				if ((w == 1) || ((cash >= price * (L + 1)) && (w == 0))) {
+					L = L + 1;
+					total = L * price;
+					System.out.print("# OF LITERS PUMPED: ");
+					System.out.print(L);
+					System.out.print("\n");
+					System.out.print("TOTAL CHARGE: $");
+					System.out.print(total);
+					System.out.print("\n");
+					System.out.print("CONTINUE PUMPING");
+					System.out.print("\n");
+					return 1;
+				}
+				else if ((w == 0) && (cash < price * (L + 1))) {
+					k = 6;
+					System.out.print("PUMP STOPPED. NOT SUFFICIENT FUNDS. ");
+					System.out.print("\n");
+					System.out.print("# OF LITERS PUMPED: ");
+					System.out.print(L);
+					System.out.print("\n");
+					System.out.print("TOTAL CHARGE: $");
+					System.out.print(total);
+					System.out.print("\n");
+					if ((w == 0) && (total < cash)) {
+						System.out.print("$");
+						System.out.print(cash - total);
+						System.out.print(" OF CASH IS RETURNED");
+						System.out.print("\n");
+					}
+					System.out.print("DO YOU WANT A RECEIPT?");
+					System.out.print("\n");
+					return 1;
+				}
+				;
+			}
+			;
+			return 0;
+		}
+
+		public final int StopPump() {
+			if (k == 5) {
+				k = 6;
+				System.out.print("PUMP STOPPED. ");
+				System.out.print("\n");
+				System.out.print("# OF LITERS PUMPED: ");
+				System.out.print(L);
+				System.out.print("\n");
+				System.out.print("TOTAL CHARGE: $");
+				System.out.print(total);
+				System.out.print("\n");
+				if ((w == 0) && (total < cash)) {
+					System.out.print("$");
+					System.out.print(cash - total);
+					System.out.print(" OF CASH IS RETURNED");
+					System.out.print("\n");
+				}
+				System.out.print("DO YOU WANT A RECEIPT?");
+				System.out.print("\n");
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+
+		public final int NoReceipt() {
+			if (k == 6) {
+				k = 0;
+				System.out.print("NO RECEIPT IS PRINTED ");
+				System.out.print("\n");
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+
+		public final int Receipt() {
+			if (k == 6) {
+				k = 0;
+				System.out.print("RECEIPT IS PRINTED: ");
+				System.out.print("\n");
+				System.out.print("# OF LITERS PUMPED: ");
+				System.out.print(L);
+				System.out.print("\n");
+				System.out.print("TOTAL CHARGE: $");
+				System.out.print(total);
+				System.out.print("\n");
+				return 1;
+						} else {
+							return 0;
+						}
+					}
+				
+					public final int TurnOff() {
+						if (k == 0) {
+							k = -2;
+							
+							System.out.print("GAS PUMP IS TURNED OFF ");
+							System.out.print("\n");
+							return 1;
+						} else {
+							return 0;
+						}
+					}
+		
+						//Testing Methods
+						
+					public final void Show_State() 
+						{
+							
+						}
+					
+					
+		
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GasPump ga = new GasPump();
+		int k = 4;
+		String val = "";
+		String State = "";
+		float a=0;
+		float b=0;
+		int c=0;
+		float d=0;
+		
+		
+		System.out.println("\n1. Activate \n2. PayCredit \n3. Reject \n4. "
+				+ "Approved \n5. PayCash \n6. Cancel \n7. Regular \n8. Super \n9. Diesel "
+				+ "\n0. StartPump \n 10. PumpLiter \n11. StopPump \n12. NoReceipt \n13. Receipt "
+				+ "\n14. TurnOff \n15. Show State \n16.Show_variables" );
+		System.out.println("\nSelect any transition():");
+		Scanner s = new Scanner(System.in);
+		Scanner p = new Scanner(System.in);
+		val= s.nextLine();
+		do {
+		if (val != "q")
+		{
+		switch (val)
+		{
+		case "0":
+		int z = ga.StartPump();
+		System.out.printf("this function returns %n",z);
+		break;
+
+		case "1":
+		System.out.println("Enter value of Regular Gas a:");
+		a = p.nextFloat();
+		System.out.println("Enter value of Super Gas b: ");
+		b = p.nextFloat();
+		System.out.println("Enter value of Diesel d: ");
+		d = p.nextFloat();
+		ga.Activate(a, b, d);
+		int e= ga.Activate(a, b, d);
+		System.out.print("This function returns ");
+		System.out.print(e);
+		if (e==1){
+		State = "S0";}
+		
+		break;
+		
+		case "2":
+		int f= ga.PayCredit();
+		System.out.print("This function returns ");
+		System.out.print(f);
+		if (f==1){
+		State = "S2";}
+
+		break;
+		
+		case "3":
+
+			int g= ga.Reject();
+			System.out.print("This function returns ");
+			System.out.print(g);
+			if (g==1){
+				State = "S0";}
+	
+			break;
+			
+		case "4":
+			int h= ga.Approved();	
+			System.out.print("This function returns ");
+			System.out.print(h);
+			if (h==1){
+				State = "S3";}
+
+			break;
+			
+		case "5":
+
+			System.out.println("enter cash: $");
+			c= s.nextInt(); 
+			
+			int i= ga.PayCash(c);	
+			System.out.print("This function returns ");
+			System.out.print(i);
+			if (i==1){
+				State = "S3";}
+
+			break;
+			
+		case "6":
+			int j= ga.Cancel();
+			System.out.print("This function returns ");
+			System.out.print(j);
+			if (j==1){
+				State = "S3";}
+			break;
+			
+			
+		case "7":
+			int l= ga.Regular();	
+			System.out.print("This function returns ");
+			System.out.print(l);
+			if (l==1){
+				State = "S4";}
+			break;
+			
+		case "8":
+			int m = ga.Super();
+			System.out.print("This function returns ");
+			System.out.print(m);
+			if (m==1){
+				State = "S4";}
+			break;
+			
+		case "9":
+			int o =	ga.Diesel();
+			System.out.print("This function returns ");
+			System.out.print(o);
+			if (o==1){
+				State = "S4";}
+			break;
+		
+		case "10":
+		    int t = ga.PumpLiter();
+		    System.out.print("This function returns ");
+			System.out.print(t);
+			if (t==1 && State == "S1"){
+				State = "S1";}
+		//	else if
+			//(t==1 && State =="S5" && c <price)	
+			//{ State = "S6";}
+			else 
+				State ="S5";
+				break;
+		
+		case "11":
+		    int u = ga.StopPump();
+		    System.out.print("This function returns ");
+			System.out.print(u);
+			if (u==1){
+				State = "S6";}
+			break;
+		
+		case "12":
+		    int v = ga.NoReceipt();
+		    System.out.print("This function returns ");
+			System.out.print(v);
+			if (v==1){
+				State = "S0";}
+			break;
+		
+		case "13":
+		    int w = ga.Receipt();
+		    System.out.print("This function returns ");
+			System.out.print(w);
+			if (w==1){
+				State = "S0";}
+			break;
+			
+		case "14":
+		    int x = ga.TurnOff();
+		    System.out.print("This function returns ");
+			System.out.print(x);
+			if (x==1){
+				State = "Exit";}
+			break;
+			
+		case "15":
+		System.out.print(State);
+		
+		case "16":
+			System.out.print("Value of a:");
+			System.out.print(a);
+
+			System.out.print("Value of b:");
+			System.out.print(b);
+
+			System.out.print("Value of c:");
+			System.out.print(c);
+
+			System.out.print("Value of d:");
+			System.out.print(d);
+
+			
+		}}
+		else
+		System.out.println("please select from given menu or press q to exit");
+		val= s.nextLine();
+		}
+		while (val != "q");
+	System.exit(0);	
+	}
+	
+}
+	
+	
+
+
+	
